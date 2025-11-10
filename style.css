@@ -1,104 +1,574 @@
-/* --- RESET E TIPOGRAFIA GERAL --- */
+/*
+ * Tema Minimalista Preto e Branco (B&W)
+ * Focado em profissionalismo, alto contraste e tipografia limpa.
+ */
+
+:root {
+    --color-primary: #000000; /* Preto puro */
+    --color-secondary: #FFFFFF; /* Branco puro */
+    --color-accent: #555555; /* Cinza escuro para detalhes */
+    --color-light-gray: #F5F5F5; /* Cinza claríssimo para fundos de seção */
+    --font-stack: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ----------------------------------------------------------------
+   BASE & GLOBAL
+---------------------------------------------------------------- */
+
 body {
-    /* Define o fundo como branco puro */
-    background-color: #FFFFFF; 
-    /* Define a cor principal do texto como preto puro */
-    color: #000000;
-    /* Fonte limpa e profissional para alta legibilidade */
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    font-family: var(--font-stack);
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* Garante que títulos sejam pretos e bem definidos */
-h1, h2, h3, h4, h5, h6 {
-    color: #000000;
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    font-weight: 700; /* Mais ousado para destacar */
-}
-
-/* --- ESTRUTURA E LAYOUT --- */
 .container {
-    /* Centraliza o conteúdo e adiciona espaço nas laterais */
-    max-width: 1000px; 
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
 }
 
-/* Linhas separadoras sutis em cinza */
-hr {
-    border: none;
-    border-top: 1px solid #CCCCCC; /* Cinza claro */
-    margin: 30px 0;
+/* Estiliza títulos e garante fonte limpa */
+h1, h2, h3, h4 {
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
-/* --- LINKS E INTERATIVIDADE --- */
+p {
+    margin-bottom: 1em;
+}
+
+/* Links sem sublinhado, destaque ao passar o mouse */
 a {
-    /* Links em cor preta para manter o minimalismo */
-    color: #000000; 
-    text-decoration: none; /* Remove o sublinhado padrão */
-    border-bottom: 1px solid #000000; /* Adiciona um sublinhado sutil */
-    transition: color 0.3s, border-color 0.3s;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
 a:hover {
-    /* Ao passar o mouse, inverte a cor do texto para um efeito sutil */
-    color: #555555;
-    border-bottom: 1px solid #555555;
+    color: var(--color-accent);
 }
 
-/* Estilo específico para botões (se houver) */
-.button {
+.highlight {
+    color: var(--color-accent); 
+    font-weight: 700;
+}
+
+/* Garante que imagens fiquem em preto e branco */
+img {
+    filter: grayscale(100%);
+    max-width: 100%;
+    height: auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 50px;
+    /* Linha sutil para destacar títulos de seção */
+    border-bottom: 2px solid var(--color-primary); 
     display: inline-block;
-    padding: 10px 20px;
-    background-color: #000000;
-    color: #FFFFFF;
-    border: 1px solid #000000;
+    padding-bottom: 5px;
+}
+
+/* ----------------------------------------------------------------
+   NAVIGATION
+---------------------------------------------------------------- */
+
+.navbar {
+    background-color: var(--color-secondary);
+    border-bottom: 1px solid var(--color-light-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.nav-logo span {
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+.nav-link {
+    margin-left: 25px;
+    font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
+}
+
+.nav-link:hover {
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+}
+
+.nav-toggle { display: none; } /* Mobile toggle */
+.nav-menu { display: flex; }
+
+/* ----------------------------------------------------------------
+   BUTTONS (btn)
+---------------------------------------------------------------- */
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-align: center;
+    text-transform: uppercase;
     font-weight: 600;
+    letter-spacing: 0.5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-right: 10px;
 }
 
-.button:hover {
-    background-color: #FFFFFF;
-    color: #000000;
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border-color: var(--color-primary);
 }
 
-/* --- LISTAS DE PROJETOS E HABILIDADES --- */
-ul, ol {
-    padding-left: 20px;
+.btn-primary:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
-li {
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+.btn-outline {
+    border: 2px solid var(--color-primary);
+    background: none;
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+}
+
+
+/* ----------------------------------------------------------------
+   HERO SECTION
+---------------------------------------------------------------- */
+
+.hero {
+    padding: 80px 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-title {
+    font-size: 3.5em;
     margin-bottom: 10px;
 }
 
-/* Estilo para cartões de projetos (se estiver usando) */
-.project-card {
-    border: 1px solid #CCCCCC;
+.hero-subtitle {
+    font-size: 1.8em;
+    font-weight: 400;
+    color: var(--color-accent);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.hero-social .social-link {
+    font-size: 1.5em;
+    margin-right: 20px;
+    border: none;
+}
+
+/* Efeito de código B&W */
+.hero-image {
+    max-width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.code-animation {
+    width: 250px;
+    height: 250px;
+    border: 2px solid var(--color-primary);
     padding: 20px;
+    background-color: var(--color-light-gray);
+}
+.code-line {
+    height: 8px;
+    background-color: var(--color-primary);
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+.code-line:nth-child(2) { width: 80%; }
+.code-line:nth-child(3) { width: 90%; }
+.code-line:nth-child(4) { width: 70%; }
+
+
+/* ----------------------------------------------------------------
+   ABOUT SECTION
+---------------------------------------------------------------- */
+
+.about {
+    background-color: var(--color-light-gray);
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 2;
+    padding-right: 40px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-accent);
+}
+
+.stat {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2em;
+    font-weight: 700;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.9em;
+    color: var(--color-accent);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ----------------------------------------------------------------
+   SKILLS SECTION
+---------------------------------------------------------------- */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.skill-category h3 {
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 10px;
     margin-bottom: 20px;
+    font-size: 1.4em;
+    font-weight: 700;
 }
 
-/* Remove qualquer sombra ou cor de fundo desnecessária */
-.header, .footer {
-    background-color: #FFFFFF;
-    border-bottom: 1px solid #EEEEEE;
-    padding: 15px 0;
+.skill-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* --- IMAGENS (Se houver) --- */
-img {
-    max-width: 100%;
-    height: auto;
-    /* Garante que imagens não quebrem o design B&W */
-    filter: grayscale(100%); 
-    transition: filter 0.5s;
+.skill-item {
+    background-color: var(--color-light-gray);
+    color: var(--color-primary);
+    padding: 8px 15px;
+    border: 1px solid var(--color-accent);
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background-color 0.3s;
 }
 
-img:hover {
-    /* Opcional: mostra a cor original ao passar o mouse */
-    filter: grayscale(0%);
+.skill-item:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    cursor: default;
+}
+
+/* ----------------------------------------------------------------
+   PROJECTS SECTION
+---------------------------------------------------------------- */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    border: 1px solid var(--color-primary);
+    padding: 25px;
+    transition: box-shadow 0.3s, transform 0.3s;
+    background-color: var(--color-secondary);
+}
+
+.project-card:hover {
+    /* Efeito de destaque profissional */
+    box-shadow: 5px 5px 0 0 var(--color-primary);
+    transform: translate(-5px, -5px);
+}
+
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.project-header h3 {
+    margin: 0;
+    font-size: 1.3em;
+}
+
+.project-year {
+    color: var(--color-accent);
+    font-size: 0.9em;
+    font-weight: 500;
+}
+
+.project-description {
+    font-size: 0.95em;
+    color: var(--color-accent);
+    min-height: 4em; 
+}
+
+.project-tech {
+    margin: 15px 0;
+}
+
+.tech-tag {
+    display: inline-block;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 5px 10px;
+    margin-right: 5px;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.project-link {
+    border: none;
+    font-weight: 600;
+}
+
+.projects-footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* ----------------------------------------------------------------
+   CONTACT SECTION
+---------------------------------------------------------------- */
+
+.contact {
+    background-color: var(--color-light-gray);
+}
+
+.contact-content {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-info {
+    max-width: 600px;
+}
+
+.contact-methods {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1em;
+    text-align: left;
+}
+
+.contact-method i {
+    font-size: 1.5em;
+    color: var(--color-primary);
+}
+
+.contact-method h4 {
+    margin: 0;
+    font-size: 1em;
+}
+
+.contact-method a {
+    border-bottom: 1px solid var(--color-accent);
+}
+
+/* ----------------------------------------------------------------
+   FOOTER
+---------------------------------------------------------------- */
+
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-light-gray);
+    padding: 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.footer-social a {
+    color: var(--color-secondary);
+    font-size: 1.5em;
+    margin-left: 20px;
+    border: none;
+}
+
+.footer-social a:hover {
+    color: var(--color-accent);
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVIDADE (MOBILE)
+---------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Mostra o botão de menu (hamburguer) */
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+    }
+    
+    .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: var(--color-primary);
+    }
+    
+    /* Oculta o menu principal e o exibe verticalmente no mobile quando a classe 'active' é adicionada pelo JS */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: var(--color-secondary);
+        border-top: 1px solid var(--color-light-gray);
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-link {
+        margin: 0;
+        padding: 15px 20px;
+        border-bottom: 1px solid var(--color-light-gray);
+        width: 100%;
+    }
+    
+    /* Hero section */
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        order: 2;
+    }
+
+    .hero-image {
+        max-width: 80%;
+        margin-bottom: 40px;
+        order: 1;
+    }
+    
+    .hero-title {
+        font-size: 2.5em;
+    }
+    
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+    }
+    
+    /* About section */
+    .about-text {
+        padding-right: 0;
+    }
+
+    .stats {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .stat {
+        padding: 0;
+    }
+    
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-social {
+        margin-top: 15px;
+    }
 }
