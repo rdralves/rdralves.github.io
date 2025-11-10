@@ -3,203 +3,455 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rodrigo Alves dos Reis - Desenvolvedor Python</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Rodrigo Alves dos Reis - Desenvolvedor Python | Flask | Web Development">
+    <meta name="author" content="Rodrigo Alves dos Reis">
+    <title>Rodrigo Alves dos Reis | Desenvolvedor Python</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <nav class="navbar">
-        <div class="container nav-container">
-            <span class="nav-logo">RODRIGO ALVES</span>
-            <div class="nav-menu">
-                <a href="#about" class="nav-link">Sobre</a>
-                <a href="#skills" class="nav-link">Habilidades</a>
-                <a href="#projects" class="nav-link">Projetos</a>
-                <a href="#contact" class="nav-link">Contato</a>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <a href="#home">Rodrigo Alves</a>
             </div>
-        </div>
-    </nav>
+            <ul class="nav__menu" id="navMenu">
+                <li><a href="#home" class="nav__link">Início</a></li>
+                <li><a href="#about" class="nav__link">Sobre</a></li>
+                <li><a href="#skills" class="nav__link">Habilidades</a></li>
+                <li><a href="#projects" class="nav__link">Projetos</a></li>
+                <li><a href="#contact" class="nav__link">Contato</a></li>
+            </ul>
+            <div class="nav__toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <h1 class="hero-title">Olá, eu sou <span class="highlight">Rodrigo Alves</span></h1>
-            <h2 class="hero-subtitle">Desenvolvedor Python & Web | Logística & Fiscal</h2>
-            <p class="hero-description">
-                Especializado em Django e Flask, unindo experiência técnica no desenvolvimento de soluções
-                web robustas com profundo conhecimento em sistemas de gestão (logística e fiscal).
-            </p>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                <a href="https://github.com/rdralves" target="_blank" class="btn btn-secondary">GitHub</a>
-            </div>
-            <div class="hero-social">
-                <a href="https://www.linkedin.com/in/rodrigoalvesreis/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/5511963684836" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
-                <a href="mailto:rdr.alves@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <p class="about-text">
-                Desenvolvedor Python com mais de 3 anos de experiência em desenvolvimento web utilizando
-                Django e Flask. Minha paixão é criar sistemas de gestão, aplicações web responsivas e
-                integrar APIs.
-            </p>
-            <p class="about-text">
-                Meu diferencial reside na minha sólida experiência profissional prévia em rotinas **logísticas**
-                (Controle de Estoque, Conferência, Expedição) e **fiscais** (Escrituração e Apuração de Impostos),
-                permitindo-me desenvolver soluções que resolvem problemas de negócio reais.
-            </p>
-            <div class="stats">
-                <div class="stat">
-                    <span class="stat-number">36+</span>
-                    <span class="stat-label">Repositórios GitHub</span>
+            <div class="hero__content">
+                <div class="hero__text">
+                    <span class="hero__greeting">Olá, eu sou</span>
+                    <h1 class="hero__title">Rodrigo Alves dos Reis</h1>
+                    <p class="hero__subtitle">Desenvolvedor Python | Flask | Web Development</p>
+                    <p class="hero__description">
+                        Apaixonado por programação e desenvolvimento web. Especializado em criar aplicações robustas e escaláveis com Python e Flask.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#projects" class="btn btn--primary">Ver Projetos</a>
+                        <a href="#contact" class="btn btn--secondary">Entrar em Contato</a>
+                    </div>
+                    <div class="hero__social">
+                        <a href="https://github.com/rdralves" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/rodrigoalvesreis" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="mailto:rdr.alves@gmail.com" aria-label="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">3+</span>
-                    <span class="stat-label">Anos Codando</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Projetos Completos</span>
+                <div class="hero__image">
+                    <div class="hero__blob">
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#2563eb" d="M44.7,-76.4C58.8,-69.2,71.8,-59.1,79.6,-45.8C87.4,-32.6,90,-16.3,88.5,-0.9C87,14.6,81.4,29.2,73.1,42.2C64.8,55.2,53.8,66.6,40.3,73.8C26.8,81,10.8,83.9,-4.3,81.9C-19.4,79.9,-33.5,73,-45.8,63.8C-58.1,54.6,-68.6,43.1,-75.4,29.2C-82.2,15.3,-85.3,-1,-82.1,-16.2C-78.9,-31.4,-69.4,-45.5,-57.3,-53.3C-45.2,-61.1,-30.5,-62.6,-16.3,-65.8C-2.1,-69,10.6,-73.9,24.7,-76.4C38.8,-78.9,54.3,-78.9,44.7,-76.4Z" transform="translate(100 100)" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="skills">
+    <!-- About Section -->
+    <section class="about section" id="about">
         <div class="container">
-            <h2 class="section-title">Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Backend & Frameworks</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Django</span>
-                        <span class="skill-item">Django REST Framework</span>
-                        <span class="skill-item">Flask</span>
-                        <span class="skill-item">APIs REST</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Frontend & Ferramentas</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">HTML5</span>
-                        <span class="skill-item">CSS3</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">Bootstrap</span>
-                        <span class="skill-item">Git/GitHub</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Banco de Dados & DevOps</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">SQLite</span>
-                        <span class="skill-item">MySQL</span>
-                        <span class="skill-item">Gunicorn</span>
-                        <span class="skill-item">Railway</span>
+            <h2 class="section__title">Sobre Mim</h2>
+            <div class="about__content">
+                <div class="about__text">
+                    <p class="about__description">
+                        Desenvolvedor apaixonado por tecnologia e programação, com foco em desenvolvimento web utilizando Python e Flask. 
+                        Tenho experiência na criação de aplicações completas, desde a arquitetura até a implementação, sempre priorizando 
+                        segurança, escalabilidade e boas práticas de desenvolvimento.
+                    </p>
+                    <p class="about__description">
+                        Atualmente, estou me aprofundando em Python com Flask, desenvolvendo projetos que envolvem autenticação de usuários, 
+                        gerenciamento de dados, APIs RESTful e interfaces responsivas. Busco constantemente aprender novas tecnologias e 
+                        aprimorar minhas habilidades para criar soluções cada vez mais eficientes.
+                    </p>
+                    <div class="about__info">
+                        <div class="about__box">
+                            <span class="about__number">3+</span>
+                            <span class="about__label">Projetos Completos</span>
+                        </div>
+                        <div class="about__box">
+                            <span class="about__number">Python</span>
+                            <span class="about__label">Linguagem Principal</span>
+                        </div>
+                        <div class="about__box">
+                            <span class="about__number">Flask</span>
+                            <span class="about__label">Framework Web</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="projects">
+    <!-- Skills Section -->
+    <section class="skills section" id="skills">
         <div class="container">
-            <h2 class="section-title">Projetos Principais</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3 class="project-title">Sistema de Gestão de Estoque (Produtos)</h3>
-                    <p class="project-description">
-                        Sistema completo para gerenciamento de estoque, entradas e saídas. Integração com PostgreSQL
-                        e funcionalidade de exportação de relatórios para Excel.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Django</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Openpyxl</span>
+            <h2 class="section__title">Habilidades Técnicas</h2>
+            <div class="skills__content">
+                <div class="skills__category">
+                    <h3 class="skills__subtitle">Backend</h3>
+                    <div class="skills__list">
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Python</span>
+                                <span class="skill__level">Avançado</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Flask</span>
+                                <span class="skill__level">Avançado</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">SQLite / SQL</span>
+                                <span class="skill__level">Intermediário</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">APIs RESTful</span>
+                                <span class="skill__level">Intermediário</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 75%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://github.com/rdralves/controle-produtos" target="_blank" class="project-link">Ver Código <i class="fab fa-github"></i></a>
                 </div>
 
-                <div class="project-card">
-                    <h3 class="project-title">TrackLog - Rastreamento Logístico (Frota)</h3>
-                    <p class="project-description">
-                        Aplicação para controle e rastreamento de encomendas. Inclui módulos de motorista, cliente e administrador, essencial para gestão de frotas e logística.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python/Flask</span>
-                        <span class="tech-tag">Autenticação</span>
-                        <span class="tech-tag">Web</span>
+                <div class="skills__category">
+                    <h3 class="skills__subtitle">Frontend</h3>
+                    <div class="skills__list">
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">HTML5</span>
+                                <span class="skill__level">Avançado</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">CSS3</span>
+                                <span class="skill__level">Avançado</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">JavaScript</span>
+                                <span class="skill__level">Intermediário</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Bootstrap</span>
+                                <span class="skill__level">Intermediário</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 70%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://github.com/rdralves/tracklog" target="_blank" class="project-link">Ver Código <i class="fab fa-github"></i></a>
                 </div>
 
-                <div class="project-card">
-                    <h3 class="project-title">CRUD Web Simples</h3>
-                    <p class="project-description">
-                        Demonstração de proficiência em operações CRUD (Criar, Ler, Atualizar, Deletar) utilizando front-end puro.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML</span>
-                        <span class="tech-tag">CSS</span>
-                        <span class="tech-tag">JavaScript</span>
+                <div class="skills__category">
+                    <h3 class="skills__subtitle">Ferramentas & Outros</h3>
+                    <div class="skills__list">
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Git & GitHub</span>
+                                <span class="skill__level">Intermediário</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Jinja2</span>
+                                <span class="skill__level">Avançado</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Werkzeug Security</span>
+                                <span class="skill__level">Intermediário</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill__item">
+                            <div class="skill__header">
+                                <span class="skill__name">Flask-Login</span>
+                                <span class="skill__level">Intermediário</span>
+                            </div>
+                            <div class="skill__bar">
+                                <div class="skill__progress" style="width: 75%"></div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="https://github.com/rdralves/crud" target="_blank" class="project-link">Ver Código <i class="fab fa-github"></i></a>
                 </div>
-            </div>
-            <div class="projects-footer">
-                <a href="https://github.com/rdralves" target="_blank" class="btn btn-outline">Ver Todos os 36+ Repositórios</a>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="contact">
-        <div class="container contact-content">
-            <h2 class="section-title">Entre em Contato</h2>
-            <p>
-                Estou aberto a novas oportunidades em desenvolvimento Python. Vamos conversar sobre o seu próximo projeto ou vaga!
-            </p>
-            <div class="contact-methods">
-                <div class="contact-method">
-                    <i class="fas fa-envelope"></i>
-                    <span>rdr.alves@gmail.com</span>
-                </div>
-                <div class="contact-method">
-                    <i class="fab fa-whatsapp"></i>
-                    <span>(11) 96368-4836</span>
-                </div>
-                <div class="contact-method">
-                    <i class="fab fa-linkedin"></i>
-                    <a href="https://www.linkedin.com/in/rodrigoalvesreis/" target="_blank">linkedin.com/in/rodrigoalvesreis/</a>
+    <!-- Projects Section -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <h2 class="section__title">Projetos em Destaque</h2>
+            <div class="projects__grid">
+                <!-- Project 1 -->
+                <article class="project__card">
+                    <div class="project__image">
+                        <div class="project__overlay">
+                            <a href="https://github.com/rdralves/sistema-frotas" target="_blank" rel="noopener noreferrer" class="project__link">
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Sistema de Frotas</h3>
+                        <p class="project__description">
+                            Sistema web completo de autenticação e gerenciamento construído com Flask. Implementa registro de usuários, 
+                            login seguro com hash de senhas, proteção de rotas e arquitetura modular com blueprints.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">SQLite</span>
+                            <span class="tag">Werkzeug</span>
+                            <span class="tag">HTML/CSS</span>
+                        </div>
+                        <div class="project__features">
+                            <ul>
+                                <li>✓ Autenticação segura com hash de senhas</li>
+                                <li>✓ Gerenciamento de sessões com Flask-Login</li>
+                                <li>✓ Arquitetura modular e escalável</li>
+                                <li>✓ Interface responsiva</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project__card">
+                    <div class="project__image">
+                        <div class="project__overlay">
+                            <a href="https://github.com/rdralves/.app_web_flask" target="_blank" rel="noopener noreferrer" class="project__link">
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">App Web Flask - Aniversariantes</h3>
+                        <p class="project__description">
+                            Aplicativo web para notificar aniversariantes do dia e dos próximos 7 dias. Sistema completo com cadastro de 
+                            usuários, login/logout e interface responsiva com Bootstrap 5.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Bootstrap 5</span>
+                            <span class="tag">SQLAlchemy</span>
+                            <span class="tag">Blueprints</span>
+                        </div>
+                        <div class="project__features">
+                            <ul>
+                                <li>✓ Notificações de aniversários</li>
+                                <li>✓ Sistema de autenticação completo</li>
+                                <li>✓ Interface moderna e responsiva</li>
+                                <li>✓ Estrutura modular com blueprints</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project__card">
+                    <div class="project__image">
+                        <div class="project__overlay">
+                            <a href="https://github.com/rdralves/tracklog" target="_blank" rel="noopener noreferrer" class="project__link">
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">TrackLog</h3>
+                        <p class="project__description">
+                            Sistema de gerenciamento e rastreamento desenvolvido em Python. Projeto focado em organização de dados 
+                            e implementação de funcionalidades de logging e tracking.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Data Management</span>
+                        </div>
+                        <div class="project__features">
+                            <ul>
+                                <li>✓ Sistema de rastreamento</li>
+                                <li>✓ Gerenciamento de dados</li>
+                                <li>✓ Logging estruturado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project__card">
+                    <div class="project__image">
+                        <div class="project__overlay">
+                            <a href="https://github.com/rdralves/controle-produtos" target="_blank" rel="noopener noreferrer" class="project__link">
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3 class="project__title">Controle de Produtos</h3>
+                        <p class="project__description">
+                            Sistema de controle e gerenciamento de produtos desenvolvido em Python. Aplicação para cadastro, 
+                            consulta e gerenciamento de inventário.
+                        </p>
+                        <div class="project__tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">CRUD</span>
+                            <span class="tag">Database</span>
+                        </div>
+                        <div class="project__features">
+                            <ul>
+                                <li>✓ CRUD completo de produtos</li>
+                                <li>✓ Gerenciamento de inventário</li>
+                                <li>✓ Interface intuitiva</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="section__title">Entre em Contato</h2>
+            <div class="contact__content">
+                <div class="contact__info">
+                    <p class="contact__description">
+                        Estou sempre aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou 
+                        gostaria de conversar sobre desenvolvimento web, não hesite em entrar em contato!
+                    </p>
+                    <div class="contact__cards">
+                        <div class="contact__card">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                            </svg>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:rdr.alves@gmail.com">rdr.alves@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact__card">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                            <div>
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/rdralves" target="_blank" rel="noopener noreferrer">@rdralves</a>
+                            </div>
+                        </div>
+                        <div class="contact__card">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/rodrigoalvesreis" target="_blank" rel="noopener noreferrer">rodrigoalvesreis</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container footer-content">
-            <p>&copy; 2025 Rodrigo Alves dos Reis. Desenvolvedor Python. | Todos os direitos reservados.</p>
+        <div class="container">
+            <div class="footer__content">
+                <p class="footer__text">
+                    © 2025 Rodrigo Alves dos Reis. Desenvolvido com ❤️ e Python.
+                </p>
+                <div class="footer__social">
+                    <a href="https://github.com/rdralves" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="https://linkedin.com/in/rodrigoalvesreis" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:rdr.alves@gmail.com" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-9.458l4.623 3.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-3.741v9.348l-4.616-5.607z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const navToggle = document.getElementById('nav-toggle');
-            const navMenu = document.querySelector('.nav-menu');
-
-            if (navToggle && navMenu) {
-                navToggle.addEventListener('click', () => {
-                    navMenu.classList.toggle('active');
-                });
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
