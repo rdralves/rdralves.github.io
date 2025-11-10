@@ -1,14 +1,14 @@
 /*
- * Tema Minimalista Preto e Branco (B&W)
- * Focado em profissionalismo, alto contraste e tipografia limpa.
+ * Minimalista B&W V2.0 - Focado em Alinhamento e Elegância
  */
 
 :root {
-    --color-primary: #000000; /* Preto puro */
-    --color-secondary: #FFFFFF; /* Branco puro */
-    --color-accent: #555555; /* Cinza escuro para detalhes */
-    --color-light-gray: #F5F5F5; /* Cinza claríssimo para fundos de seção */
-    --font-stack: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --color-primary: #000000; /* Preto */
+    --color-secondary: #FFFFFF; /* Branco */
+    --color-gray-dark: #333333; /* Cinza Escuro */
+    --color-gray-light: #F8F8F8; /* Fundo de Seção */
+    --font-stack: 'Inter', sans-serif;
+    --border-style: 2px solid var(--color-primary);
 }
 
 /* ----------------------------------------------------------------
@@ -17,7 +17,7 @@
 
 body {
     background-color: var(--color-secondary);
-    color: var(--color-primary);
+    color: var(--color-gray-dark);
     font-family: var(--font-stack);
     line-height: 1.6;
     margin: 0;
@@ -25,53 +25,33 @@ body {
 }
 
 .container {
-    max-width: 1100px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 60px 20px;
 }
 
-/* Estiliza títulos e garante fonte limpa */
-h1, h2, h3, h4 {
+h1, h2, h3 {
     color: var(--color-primary);
     font-weight: 700;
-}
-
-p {
-    margin-bottom: 1em;
-}
-
-/* Links sem sublinhado, destaque ao passar o mouse */
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-a:hover {
-    color: var(--color-accent);
-}
-
-.highlight {
-    color: var(--color-accent); 
-    font-weight: 700;
-}
-
-/* Garante que imagens fiquem em preto e branco */
-img {
-    filter: grayscale(100%);
-    max-width: 100%;
-    height: auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .section-title {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.2em;
     font-weight: 700;
     margin-bottom: 50px;
-    /* Linha sutil para destacar títulos de seção */
-    border-bottom: 2px solid var(--color-primary); 
+    padding-bottom: 10px;
+    /* Linha de separação elegante */
+    border-bottom: 1px solid var(--color-gray-dark); 
     display: inline-block;
-    padding-bottom: 5px;
+}
+
+/* Destaque primário (Preto) */
+.highlight {
+    color: var(--color-primary);
+    font-weight: 700;
 }
 
 /* ----------------------------------------------------------------
@@ -80,7 +60,7 @@ img {
 
 .navbar {
     background-color: var(--color-secondary);
-    border-bottom: 1px solid var(--color-light-gray);
+    border-bottom: 1px solid var(--color-gray-light);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -90,32 +70,70 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 15px 20px;
+    padding: 20px 0;
 }
 
-.nav-logo span {
-    font-size: 1.2em;
+.nav-logo {
+    font-size: 1.1em;
     font-weight: 700;
 }
 
 .nav-link {
-    margin-left: 25px;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border-bottom: 2px solid transparent;
-    padding-bottom: 2px;
+    margin-left: 30px;
+    font-weight: 600;
+    color: var(--color-gray-dark);
+    transition: color 0.3s;
 }
 
 .nav-link:hover {
-    color: var(--color-accent);
-    border-bottom: 2px solid var(--color-accent);
+    color: var(--color-primary);
 }
 
-.nav-toggle { display: none; } /* Mobile toggle */
-.nav-menu { display: flex; }
+/* ----------------------------------------------------------------
+   HERO SECTION
+---------------------------------------------------------------- */
+
+.hero {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    /* Garante que o conteúdo Hero não ocupe a largura máxima */
+    max-width: 750px; 
+}
+
+.hero-title {
+    font-size: 3.2em;
+    margin-bottom: 10px;
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--color-gray-dark);
+    margin-bottom: 30px;
+}
+
+.hero-description {
+    font-size: 1.1em;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+}
+
+.hero-buttons {
+    margin-bottom: 30px;
+}
+
+.social-link {
+    font-size: 1.5em;
+    margin: 0 15px;
+    color: var(--color-gray-dark);
+}
+.social-link:hover {
+    color: var(--color-primary);
+}
+
 
 /* ----------------------------------------------------------------
    BUTTONS (btn)
@@ -123,21 +141,18 @@ img {
 
 .btn {
     display: inline-block;
-    padding: 12px 25px;
-    text-align: center;
+    padding: 12px 30px;
     text-transform: uppercase;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    border: 2px solid transparent;
+    border: var(--border-style);
     cursor: pointer;
     transition: all 0.3s;
-    margin-right: 10px;
+    margin: 5px;
 }
 
 .btn-primary {
     background-color: var(--color-primary);
     color: var(--color-secondary);
-    border-color: var(--color-primary);
 }
 
 .btn-primary:hover {
@@ -148,7 +163,6 @@ img {
 .btn-secondary {
     background-color: var(--color-secondary);
     color: var(--color-primary);
-    border-color: var(--color-primary);
 }
 
 .btn-secondary:hover {
@@ -157,7 +171,6 @@ img {
 }
 
 .btn-outline {
-    border: 2px solid var(--color-primary);
     background: none;
     color: var(--color-primary);
 }
@@ -167,120 +180,45 @@ img {
     color: var(--color-secondary);
 }
 
-
-/* ----------------------------------------------------------------
-   HERO SECTION
----------------------------------------------------------------- */
-
-.hero {
-    padding: 80px 0;
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-}
-
-.hero-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero-content {
-    max-width: 50%;
-}
-
-.hero-title {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-}
-
-.hero-subtitle {
-    font-size: 1.8em;
-    font-weight: 400;
-    color: var(--color-accent);
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-
-.hero-social .social-link {
-    font-size: 1.5em;
-    margin-right: 20px;
-    border: none;
-}
-
-/* Efeito de código B&W */
-.hero-image {
-    max-width: 40%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.code-animation {
-    width: 250px;
-    height: 250px;
-    border: 2px solid var(--color-primary);
-    padding: 20px;
-    background-color: var(--color-light-gray);
-}
-.code-line {
-    height: 8px;
-    background-color: var(--color-primary);
-    margin-bottom: 10px;
-    opacity: 0.8;
-}
-.code-line:nth-child(2) { width: 80%; }
-.code-line:nth-child(3) { width: 90%; }
-.code-line:nth-child(4) { width: 70%; }
-
-
 /* ----------------------------------------------------------------
    ABOUT SECTION
 ---------------------------------------------------------------- */
 
 .about {
-    background-color: var(--color-light-gray);
-}
-
-.about-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    background-color: var(--color-gray-light);
 }
 
 .about-text {
-    flex: 2;
-    padding-right: 40px;
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    text-align: center;
 }
 
 .stats {
     display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid var(--color-accent);
+    justify-content: space-around;
+    max-width: 800px;
+    margin: 40px auto 0 auto;
+    border-top: 1px solid #DDDDDD;
+    padding-top: 40px;
 }
 
 .stat {
     text-align: center;
-    padding: 0 20px;
 }
 
 .stat-number {
     display: block;
-    font-size: 2em;
+    font-size: 2.5em;
     font-weight: 700;
+    color: var(--color-primary);
 }
 
 .stat-label {
     display: block;
     font-size: 0.9em;
-    color: var(--color-accent);
+    color: var(--color-gray-dark);
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 /* ----------------------------------------------------------------
@@ -289,15 +227,18 @@ img {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .skill-category h3 {
-    border-bottom: 1px solid var(--color-accent);
+    border-bottom: 1px solid var(--color-gray-dark);
     padding-bottom: 10px;
     margin-bottom: 20px;
-    font-size: 1.4em;
+    font-size: 1.2em;
+    text-transform: uppercase;
     font-weight: 700;
 }
 
@@ -308,87 +249,72 @@ img {
 }
 
 .skill-item {
-    background-color: var(--color-light-gray);
-    color: var(--color-primary);
-    padding: 8px 15px;
-    border: 1px solid var(--color-accent);
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    padding: 8px 12px;
     font-size: 0.9em;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .skill-item:hover {
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    cursor: default;
+    background-color: var(--color-gray-dark);
 }
 
 /* ----------------------------------------------------------------
    PROJECTS SECTION
 ---------------------------------------------------------------- */
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.project-card {
-    border: 1px solid var(--color-primary);
-    padding: 25px;
-    transition: box-shadow 0.3s, transform 0.3s;
+.projects {
     background-color: var(--color-secondary);
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    border: var(--border-style);
+    padding: 30px;
+    transition: transform 0.3s;
+}
+
 .project-card:hover {
-    /* Efeito de destaque profissional */
-    box-shadow: 5px 5px 0 0 var(--color-primary);
-    transform: translate(-5px, -5px);
+    /* Eleva o card sutilmente no hover */
+    transform: translateY(-5px); 
 }
 
-.project-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
+.project-title {
+    font-size: 1.4em;
     margin-bottom: 10px;
-}
-
-.project-header h3 {
-    margin: 0;
-    font-size: 1.3em;
-}
-
-.project-year {
-    color: var(--color-accent);
-    font-size: 0.9em;
-    font-weight: 500;
 }
 
 .project-description {
     font-size: 0.95em;
-    color: var(--color-accent);
-    min-height: 4em; 
+    color: var(--color-gray-dark);
+    min-height: 4em;
 }
 
 .project-tech {
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .tech-tag {
     display: inline-block;
-    background-color: var(--color-primary);
-    color: var(--color-secondary);
-    padding: 5px 10px;
+    border: 1px solid var(--color-gray-dark);
+    color: var(--color-gray-dark);
+    padding: 5px 8px;
     margin-right: 5px;
-    font-size: 0.8em;
-    text-transform: uppercase;
+    font-size: 0.75em;
     font-weight: 500;
     margin-bottom: 5px;
 }
 
 .project-link {
-    border: none;
     font-weight: 600;
+    border-bottom: 1px solid var(--color-primary);
 }
 
 .projects-footer {
@@ -401,48 +327,45 @@ img {
 ---------------------------------------------------------------- */
 
 .contact {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-gray-light);
 }
 
 .contact-content {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-.contact-info {
+.contact-content p {
     max-width: 600px;
+    margin-bottom: 40px;
 }
 
 .contact-methods {
-    margin-top: 30px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
 }
 
 .contact-method {
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 1.1em;
-    text-align: left;
-}
-
-.contact-method i {
-    font-size: 1.5em;
+    gap: 10px;
+    font-size: 1em;
+    font-weight: 600;
     color: var(--color-primary);
 }
 
-.contact-method h4 {
-    margin: 0;
-    font-size: 1em;
+.contact-method i {
+    font-size: 1.3em;
 }
 
 .contact-method a {
-    border-bottom: 1px solid var(--color-accent);
+    color: var(--color-primary);
 }
+
 
 /* ----------------------------------------------------------------
    FOOTER
@@ -450,125 +373,63 @@ img {
 
 .footer {
     background-color: var(--color-primary);
-    color: var(--color-light-gray);
-    padding: 30px 0;
+    color: var(--color-secondary);
+    padding: 20px 0;
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
+    text-align: center;
     padding: 0 20px;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
-.footer-social a {
-    color: var(--color-secondary);
-    font-size: 1.5em;
-    margin-left: 20px;
-    border: none;
-}
-
-.footer-social a:hover {
-    color: var(--color-accent);
-}
 
 /* ----------------------------------------------------------------
    RESPONSIVIDADE (MOBILE)
 ---------------------------------------------------------------- */
 
 @media (max-width: 768px) {
-    /* Mostra o botão de menu (hamburguer) */
-    .nav-toggle {
-        display: block;
-        cursor: pointer;
-    }
-    
-    .bar {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        transition: all 0.3s ease-in-out;
-        background-color: var(--color-primary);
-    }
-    
-    /* Oculta o menu principal e o exibe verticalmente no mobile quando a classe 'active' é adicionada pelo JS */
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: var(--color-secondary);
-        border-top: 1px solid var(--color-light-gray);
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .nav-link {
-        margin: 0;
-        padding: 15px 20px;
-        border-bottom: 1px solid var(--color-light-gray);
-        width: 100%;
-    }
-    
-    /* Hero section */
-    .hero-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        max-width: 100%;
-        order: 2;
-    }
-
-    .hero-image {
-        max-width: 80%;
-        margin-bottom: 40px;
-        order: 1;
+    .container {
+        padding: 40px 15px;
     }
     
     .hero-title {
         font-size: 2.5em;
     }
     
-    .hero-buttons {
-        display: flex;
-        justify-content: center;
+    .hero-subtitle {
+        font-size: 1.1em;
     }
     
-    /* About section */
-    .about-text {
-        padding-right: 0;
+    /* Navbar V3: Menu sempre visível, empilhado no mobile */
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-logo {
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+    }
+
+    .nav-link {
+        margin: 5px 10px;
     }
 
     .stats {
         flex-direction: column;
         gap: 20px;
     }
-    
-    .stat {
-        padding: 0;
-    }
-    
-    /* Footer */
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-    
-    .footer-social {
-        margin-top: 15px;
+
+    .project-card {
+        padding: 20px;
     }
 }
