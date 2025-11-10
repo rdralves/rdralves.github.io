@@ -1,151 +1,107 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rodrigo Alves dos Reis - Desenvolvedor Python</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>Rodrigo Alves dos Reis</span>
-            </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Início</a>
+        <div class="container nav-container">
+            <span class="nav-logo">RODRIGO ALVES</span>
+            <div class="nav-menu">
                 <a href="#about" class="nav-link">Sobre</a>
                 <a href="#skills" class="nav-link">Habilidades</a>
                 <a href="#projects" class="nav-link">Projetos</a>
-                <a href="#" class="nav-link">Contato </a>
-            </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+                <a href="#contact" class="nav-link">Contato</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    Olá, eu sou <span class="highlight">Rodrigo Alves</span>
-                </h1>
-                <h2 class="hero-subtitle">Desenvolvedor Python & Web</h2>
-                <p class="hero-description">
-                    Apaixonado por programação, especializado em Django e Flask.
-                    Criando soluções web robustas e sistemas de gestão eficientes.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                    <a href="#" class="btn btn-secondary">Contato</a>
-                </div>
-                <div class="hero-social">
-                    <a href="https://github.com/rdralves" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rodrigoalvesreis/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://wa.me/5511963684836" target="_blank" class="social-link whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="mailto:rdr.alves@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i> </a>
-                </div>
+        <div class="container hero-content">
+            <h1 class="hero-title">Olá, eu sou <span class="highlight">Rodrigo Alves</span></h1>
+            <h2 class="hero-subtitle">Desenvolvedor Python & Web | Logística & Fiscal</h2>
+            <p class="hero-description">
+                Especializado em Django e Flask, unindo experiência técnica no desenvolvimento de soluções
+                web robustas com profundo conhecimento em sistemas de gestão (logística e fiscal).
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+                <a href="https://github.com/rdralves" target="_blank" class="btn btn-secondary">GitHub</a>
             </div>
-            <div class="hero-image">
-                <div class="code-animation">
-                    <div class="code-line"></div>
-                    <div class="code-line"></div>
-                    <div class="code-line"></div>
-                    <div class="code-line"></div>
-                </div>
+            <div class="hero-social">
+                <a href="https://www.linkedin.com/in/rodrigoalvesreis/" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/5511963684836" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:rdr.alves@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Desenvolvedor Python apaixonado por programação com sólida experiência em
-                        desenvolvimento web utilizando Django e Flask. Especializado em criação de
-                        sistemas de gestão, aplicações web responsivas e integração com bancos de dados.
-                    </p>
-                    <p>
-                        Possuo amplo portfólio no GitHub com mais de 36 repositórios demonstrando
-                        evolução constante e dedicação ao aprendizado contínuo. Sempre em busca de
-                        novos desafios e tecnologias para aprimorar minhas habilidades.
-                    </p>
-                    <div class="stats">
-                        <div class="stat">
-                            <span class="stat-number">36+</span>
-                            <span class="stat-label">Repositórios</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Anos Codando</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Projetos</span>
-                        </div>
-                    </div>
+            <p class="about-text">
+                Desenvolvedor Python com mais de 3 anos de experiência em desenvolvimento web utilizando
+                Django e Flask. Minha paixão é criar sistemas de gestão, aplicações web responsivas e
+                integrar APIs.
+            </p>
+            <p class="about-text">
+                Meu diferencial reside na minha sólida experiência profissional prévia em rotinas **logísticas**
+                (Controle de Estoque, Conferência, Expedição) e **fiscais** (Escrituração e Apuração de Impostos),
+                permitindo-me desenvolver soluções que resolvem problemas de negócio reais.
+            </p>
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-number">36+</span>
+                    <span class="stat-label">Repositórios GitHub</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3+</span>
+                    <span class="stat-label">Anos Codando</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Projetos Completos</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Habilidades Técnicas</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Linguagens</h3>
+                    <h3>Backend & Frameworks</h3>
                     <div class="skill-items">
                         <span class="skill-item">Python</span>
+                        <span class="skill-item">Django</span>
+                        <span class="skill-item">Django REST Framework</span>
+                        <span class="skill-item">Flask</span>
+                        <span class="skill-item">APIs REST</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend & Ferramentas</h3>
+                    <div class="skill-items">
                         <span class="skill-item">HTML5</span>
                         <span class="skill-item">CSS3</span>
                         <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">Dart</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">Django</span>
-                        <span class="skill-item">Flask</span>
                         <span class="skill-item">Bootstrap</span>
-                        <span class="skill-item">Tkinter</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Banco de Dados</h3>
-                    <div class="skill-items">
-                        <span class="skill-item">SQLite</span>
-                        <span class="skill-item">PostgreSQL</span>
-                        <span class="skill-item">MySQL</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Ferramentas</h3>
-                    <div class="skill-items">
                         <span class="skill-item">Git/GitHub</span>
-                        <span class="skill-item">Web Scraping</span>
-                        <span class="skill-item">APIs REST</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Banco de Dados & DevOps</h3>
+                    <div class="skill-items">
+                        <span class="skill-item">PostgreSQL</span>
+                        <span class="skill-item">SQLite</span>
+                        <span class="skill-item">MySQL</span>
                         <span class="skill-item">Gunicorn</span>
                         <span class="skill-item">Railway</span>
                     </div>
@@ -154,170 +110,96 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">Projetos Principais</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Sistema de Controle de Produtos</h3>
-                        <span class="project-year">2025</span>
-                    </div>
+                    <h3 class="project-title">Sistema de Gestão de Estoque (Produtos)</h3>
                     <p class="project-description">
-                        Sistema completo de gestão de estoque desenvolvido com Django.
-                        Inclui CRUD de produtos, controle de estoque, relatórios e exportação Excel.
+                        Sistema completo para gerenciamento de estoque, entradas e saídas. Integração com PostgreSQL
+                        e funcionalidade de exportação de relatórios para Excel.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">Django</span>
-                        <span class="tech-tag">Bootstrap</span>
                         <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Railway</span>
+                        <span class="tech-tag">Openpyxl</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/rdralves/controle-produtos" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                    </div>
+                    <a href="https://github.com/rdralves/controle-produtos" target="_blank" class="project-link">Ver Código <i class="fab fa-github"></i></a>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>TrackLog</h3>
-                        <span class="project-year">2025</span>
-                    </div>
+                    <h3 class="project-title">TrackLog - Rastreamento Logístico (Frota)</h3>
                     <p class="project-description">
-                        Aplicação Python para controle e rastreamento de atividades.
-                        Desenvolvimento focado em usabilidade e performance.
+                        Aplicação para controle e rastreamento de encomendas. Inclui módulos de motorista, cliente e administrador, essencial para gestão de frotas e logística.
                     </p>
                     <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Python/Flask</span>
+                        <span class="tech-tag">Autenticação</span>
+                        <span class="tech-tag">Web</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/rdralves/tracklog" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                    </div>
+                    <a href="https://github.com/rdralves/tracklog" target="_blank" class="project-link">Ver Código <i class="fab fa-github"></i></a>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-header">
-                        <h3>Sistema Flask com Autenticação</h3>
-                        <span class="project-year">2025</span>
-                    </div>
+                    <h3 class="project-title">CRUD Web Simples</h3>
                     <p class="project-description">
-                        Sistema web desenvolvido em Flask com sistema de autenticação seguro.
-                        Implementação de login/logout e controle de acesso.
-                    </p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">SQLite</span>
-                        <span class="tech-tag">HTML/CSS</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://github.com/rdralves/sistema-flask-auth" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>CRUD Web</h3>
-                        <span class="project-year">2025</span>
-                    </div>
-                    <p class="project-description">
-                        Aplicação web com operações CRUD completas.
-                        Interface responsiva e funcionalidades modernas.
+                        Demonstração de proficiência em operações CRUD (Criar, Ler, Atualizar, Deletar) utilizando front-end puro.
                     </p>
                     <div class="project-tech">
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
                         <span class="tech-tag">JavaScript</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/rdralves/crud" target="_blank" class="project-link">
-                            <i class="fab fa-github"></i> Código
-                        </a>
-                    </div>
+                    <a href="https://github.com/rdralves/crud" target="_blank" class="project-link">Ver Código <i class="fab fa-github"></i></a>
                 </div>
             </div>
             <div class="projects-footer">
-                <a href="https://github.com/rdralves" target="_blank" class="btn btn-outline">
-                    Ver Todos os Projetos no GitHub
-                </a>
+                <a href="https://github.com/rdralves" target="_blank" class="btn btn-outline">Ver Todos os 36+ Repositórios</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Vamos Conversar?</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Entre em Contato</h3>
-                    <p>
-                        Estou sempre aberto a novas oportunidades e projetos interessantes.
-                        Vamos conversar sobre como posso ajudar em seu próximo projeto!
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
-                            <i class="fab fa-github"></i>
-                            <div>
-                                <h4>GitHub</h4>
-                                <a href="https://github.com/rdralves" target="_blank">github.com/rdralves</a>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-linkedin"></i>
-                        <a href="https://www.linkedin.com/in/rodrigoalvesreis/"><span>
-
-                        </span></a>
-
-                        <div>
-
-
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <i class="fab fa-whatsapp"></i>
-                        <div>
-
-                            <a href="https://wa.me/5511963684836" target="_blank">
-                                <h4>WhatsApp</h4>
-                            </a>
-                        </div>
-                    </div>
+        <div class="container contact-content">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p>
+                Estou aberto a novas oportunidades em desenvolvimento Python. Vamos conversar sobre o seu próximo projeto ou vaga!
+            </p>
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <span>rdr.alves@gmail.com</span>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>(11) 96368-4836</span>
+                </div>
+                <div class="contact-method">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/rodrigoalvesreis/" target="_blank">linkedin.com/in/rodrigoalvesreis/</a>
                 </div>
             </div>
-        </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Rodrigo Alves dos Reis. Desenvolvido com ❤️ e Python.</p>
-                <div class="footer-social">
-                    <a href="https://github.com/rdralves" target="_blank">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/rodrigoalvesreis/">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-
-                </div>
-            </div>
+        <div class="container footer-content">
+            <p>&copy; 2025 Rodrigo Alves dos Reis. Desenvolvedor Python. | Todos os direitos reservados.</p>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script src="script.js"></script>
-</body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.getElementById('nav-toggle');
+            const navMenu = document.querySelector('.nav-menu');
 
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+</body>
 </html>
